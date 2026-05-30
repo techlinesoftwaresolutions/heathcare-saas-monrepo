@@ -1,7 +1,8 @@
 {
   "root": false,
   "extends": [
-    "../../.eslintrc.json"
+    "../../.eslintrc.json",
+    "next/core-web-vitals"
   ],
   "env": {
     "browser": true,
@@ -10,12 +11,11 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.ts",
-        "**/*.tsx"
-      ],
+      "files": ["**/*.ts", "**/*.tsx"],
       "rules": {
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "@next/next/no-img-element": "warn",
+        "@next/next/no-html-link-for-pages": "warn"
       }
     }
   ]
