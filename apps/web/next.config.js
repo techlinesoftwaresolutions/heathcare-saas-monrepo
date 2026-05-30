@@ -11,9 +11,6 @@ const nextConfig = {
   images: {
     remotePatterns: [],
   },
-  experimental: {
-    optimizePackageImports: ['@healthcare/ui', '@healthcare/types', '@healthcare/shared'],
-  },
 };
 
 module.exports = nextConfig;

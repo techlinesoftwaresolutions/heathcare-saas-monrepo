@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 export function useAsync<T, E = string>(
   asyncFunction: () => Promise<T>,
@@ -22,12 +22,13 @@ export function useAsync<T, E = string>(
     } catch (error) {
       setError(error as E);
       setStatus('error');
+      throw error;
     }
   }, [asyncFunction]);
 
-  useState(() => {
+  useEffect(() => {
     if (immediate) {
-      execute();
+      void execute();
     }
   }, [execute, immediate]);
 
@@ -37,7 +38,7 @@ export function useAsync<T, E = string>(
 export function useMounted() {
   const [isMounted, setIsMounted] = useState(false);
 
-  useState(() => {
+  useEffect(() => {
     setIsMounted(true);
   }, []);
 
