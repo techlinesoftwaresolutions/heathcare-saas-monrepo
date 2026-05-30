@@ -1,0 +1,33 @@
+{
+  "name": "@healthcare/database",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared database configuration and utilities",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext ts --fix",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "typeorm": "^0.3.17",
+    "pg": "^8.11.3",
+    "redis": "^4.6.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "typescript": "^5.3.3",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0"
+  }
+}

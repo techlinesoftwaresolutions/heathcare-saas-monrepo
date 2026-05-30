@@ -1,0 +1,14 @@
+{
+  "root": false,
+  "extends": [
+    "../../.eslintrc.json"
+  ],
+  "env": {
+    "node": true,
+    "es2020": true
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-types": "warn",
+    "@typescript-eslint/explicit-class-field-accessibility": "warn"
+  }
+}

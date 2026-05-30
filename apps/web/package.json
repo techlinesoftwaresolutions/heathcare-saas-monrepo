@@ -1,0 +1,36 @@
+{
+  "name": "@healthcare/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Healthcare SaaS frontend application",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext ts,tsx --fix",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@healthcare/types": "*",
+    "@healthcare/ui": "*",
+    "@healthcare/shared": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/node": "^20.8.10",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "typescript": "^5.3.3",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0"
+  }
+}
